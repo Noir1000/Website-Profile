@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zinia - Portofolio Mahasiswa Manajemen Pemasaran | Pemasaran Digital, Strategi Brand, Riset Pasar, Sertifikat Seminar">
+    <meta name="keywords" content="mahasiswa pemasaran, pemasaran digital, media sosial, strategi brand, riset pasar, portofolio, sertifikat, pengalaman kerja">
+    <meta name="author" content="Zinia">
+    <meta property="og:title" content="Zinia - Portofolio Mahasiswa Manajemen Pemasaran">
+    <meta property="og:description" content="Menampilkan proyek pemasaran, riset, sertifikat, dan pengalaman dalam pemasaran digital dan strategi brand.">
+    <meta property="og:type" content="website">
+    <title>Zinia - Portofolio Mahasiswa Manajemen Pemasaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --purple-primary: #7c3aed;
+            --purple-secondary: #8b5cf6;
+            --purple-light: #a78bfa;
+            --black-primary: #111827;
+            --black-secondary: #1f2937;
+            --gray-dark: #374151;
+            --gray-medium: #6b7280;
+            --gray-light: #9ca3af;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #111827 0%, #000000 100%);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #7c3aed;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #a78bfa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        .nav-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #c084fc;
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+            color: #d1d5db;
+            font-size: 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .profile-img {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+        
+        .profile-img-inner {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-icon {
+            font-size: 48px;
+            color: #a78bfa;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(90deg, #a78bfa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 8px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #7c3aed, #c084fc);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #7c3aed;
+            color: #c084fc;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(124, 58, 237, 0.2);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .section-title i {
+            color: #a78bfa;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .portfolio-item {
+            background: rgba(31, 41, 55, 0.5);
+            border: 1px solid #374151;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            border-color: #7c3aed;
+            transform: translateY(-5px);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .portfolio-content {
+            padding: 24px;
+        }
+        
+        .portfolio-category {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(124, 58, 237, 0.2);
+            color: #c084fc;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+        
+        .portfolio-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: white;
+        }
+        
+        .portfolio-item p {
+            color: #d1d5db;
+            font-size: 14px;
+        }
+        
+        /* Certificates Grid */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .certificates-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .certificates-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .certificate-item {
+            background: #1f2937;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+        }
+        
+        .certificate-item:hover {
+            border-color: #7c3aed;
+        }
+        
+        .certificate-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .certificate-date {
+            font-size: 12px;
+            color: #9ca3af;
+            background: #374151;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+        
+        .certificate-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .certificate-issuer {
+            color: #d1d5db;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .certificate-credential {
+            font-size: 11px;
+            color: #9ca3af;
+            background: rgba(124, 58, 237, 0.2);
+            padding: 4px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+        
+        /* Experience */
+        .experience-item {
+            background: rgba(31, 41, 55, 0.5);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #374151;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            border-color: #7c3aed;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        
+        .experience-title {
+            color: #c084fc;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .experience-company {
+            color: #d1d5db;
+            margin-bottom: 4px;
+        }
+        
+        .experience-period {
+            background: #374151;
+            color: #9ca3af;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .experience-responsibilities li {
+            color: #d1d5db;
+            margin-bottom: 8px;
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .experience-responsibilities li:before {
+            content: "•";
+            color: #c084fc;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .skill-item {
+            background: rgba(31, 41, 55, 0.5);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            border-color: #7c3aed;
+        }
+        
+        .skill-item h3 {
+            color: #c084fc;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        
+        .skill-item p {
+            color: #d1d5db;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Contact */
+        .contact-social {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .social-btn {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp {
+            background: #25D366;
+            border: 2px solid #128C7E;
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border: 2px solid #bc1888;
+        }
+        
+        .tiktok {
+            background: black;
+            border: 2px solid #696969;
+            color: white;
+        }
+        
+        .contact-email {
+            color: #9ca3af;
+            margin-top: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid #374151;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #9ca3af;
+        }
+        
+        /* Responsive Navigation */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">Zinia</div>
+            <div class="nav-links">
+                <a href="#portfolio">Portofolio</a>
+                <a href="#sertifikat">Sertifikat</a>
+                <a href="#pengalaman">Pengalaman</a>
+                <a href="#riset">Riset</a>
+                <a href="#keterampilan">Keterampilan</a>
+                <a href="#artikel">Artikel</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-img">
+                <div class="profile-img-inner">
+                    <i class="fas fa-users profile-icon"></i>
+                </div>
+            </div>
+            <h1>Hai, Saya <span>Zinia</span></h1>
+            <p>Mahasiswa Manajemen Pemasaran yang bersemangat tentang pemasaran digital, strategi brand, dan perilaku konsumen</p>
+            <div>
+                <a href="#portfolio" class="btn btn-primary">Lihat Karya Saya</a>
+                <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-camera"></i> Portofolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/400x250/7c3aed/ffffff?text=Kampanye+Brand" alt="Kampanye Revitalisasi Brand" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Strategi Brand</span>
+                        <h3>Kampanye Revitalisasi Brand</h3>
+                        <p>Memimpin strategi revitalisasi brand komprehensif untuk kedai kopi lokal, menghasilkan peningkatan 45% engagement pelanggan dan pertumbuhan penjualan 30%.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/400x250/8b5cf6/ffffff?text=Media+Sosial" alt="Rencana Pemasaran Media Sosial" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Pemasaran Digital</span>
+                        <h3>Rencana Pemasaran Media Sosial</h3>
+                        <p>Mengembangkan dan mengeksekusi kampanye pemasaran media sosial 3 bulan untuk startup fashion, mencapai 15K pengikut baru dan ROI 200%.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/400x250/06b6d4/ffffff?text=Riset+Pasar" alt="Analisis Riset Pasar" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Riset Pasar</span>
+                        <h3>Analisis Riset Pasar</h3>
+                        <p>Melakukan riset pasar komprehensif untuk industri fashion berkelanjutan, mengidentifikasi tren konsumen dan lanskap kompetitif.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/400x250/10b981/ffffff?text=Strategi+Konten" alt="Strategi Pemasaran Konten" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Pemasaran Konten</span>
+                        <h3>Strategi Pemasaran Konten</h3>
+                        <p>Membuat strategi pemasaran konten untuk startup teknologi, termasuk blog, video, dan kampanye email yang meningkatkan traffic website 75%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="sertifikat" style="background: rgba(31, 41, 55, 0.2);">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-award"></i> Sertifikat & Seminar</h2>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <div class="certificate-header">
+                        <i class="fas fa-award" style="color: #a78bfa;"></i>
+                        <span class="certificate-date">Maret 2024</span>
+                    </div>
+                    <h3>Digital Marketing Masterclass</h3>
+                    <p class="certificate-issuer">Google Digital Garage</p>
+                    <p class="certificate-credential">Credential: GDDM-2024-0315</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-header">
+                        <i class="fas fa-award" style="color: #a78bfa;"></i>
+                        <span class="certificate-date">Januari 2024</span>
+                    </div>
+                    <h3>Sertifikasi Pemasaran Media Sosial</h3>
+                    <p class="certificate-issuer">Meta Blueprint</p>
+                    <p class="certificate-credential">Credential: FB-SMM-2024-0120</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-header">
+                        <i class="fas fa-award" style="color: #a78bfa;"></i>
+                        <span class="certificate-date">November 2023</span>
+                    </div>
+                    <h3>Profesional Analitik Pemasaran</h3>
+                    <p class="certificate-issuer">Coursera - University of Virginia</p>
+                    <p class="certificate-credential">Credential: MAP-UVa-2023-1105</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-header">
+                        <i class="fas fa-award" style="color: #a78bfa;"></i>
+                        <span class="certificate-date">September 2023</span>
+                    </div>
+                    <h3>Strategi Pemasaran Konten</h3>
+                    <p class="certificate-issuer">HubSpot Academy</p>
+                    <p class="certificate-credential">Credential: HS-CMS-2023-0912</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-header">
+                        <i class="fas fa-award" style="color: #a78bfa;"></i>
+                        <span class="certificate-date">Juli 2023</span>
+                    </div>
+                    <h3>Lokakarya Manajemen Brand</h3>
+                    <p class="certificate-issue
